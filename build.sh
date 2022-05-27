@@ -17,7 +17,7 @@ if [ $DOCKERPUSH -eq 1 ]; then
     TAG=$(git describe --tags --abbrev=0) 
     echo "Tag ${TAG} detected"
 
-    docker tag shukriadams/duplicity:latest shukriadams/docker-p4client:"${TAG}"
+    docker tag shukriadams/docker-p4client:latest shukriadams/docker-p4client:"${TAG}"
     docker login -u $DOCKER_USER -p $DOCKER_PASS 
     docker push shukriadams/docker-p4client:$TAG
 fi
