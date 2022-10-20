@@ -10,3 +10,5 @@ RUN apt update &&\
     chmod +x /usr/bin/p4/p4broker &&\
     chmod +x /usr/bin/p4/p4d &&\
     chmod +x /usr/bin/p4/p4p 
+
+ENV PATH="${PATH}:/usr/bin/p4"
